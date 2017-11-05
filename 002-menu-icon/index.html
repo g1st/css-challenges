@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>002</title>
+    <link rel="stylesheet" href="menu-icon.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="icon no-animation">
+          <div class="top bar"></div>
+          <div class="middle bar"></div>
+          <div class="bottom bar"></div>
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript">
+    const iconBtn = document.querySelector('.icon');
+    const iconListener = iconBtn.addEventListener('click', () => {
+      iconBtn.classList.toggle('active');
+      iconBtn.classList.remove('no-animation');
+    });
+  </script>
+  </body>
+</html>
