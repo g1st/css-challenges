@@ -1,0 +1,70 @@
+.container {
+  font-family: 'Open Sans', sans-serif;
+  height: 400px;
+  width: 400px;
+  margin: 0 auto;
+  background: linear-gradient(to right top, #4E18A7, #26B9C8);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hundred {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.one{
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 13px 0 rgba(0,0,0,.2);
+}
+
+.first-1{
+  background-color: #f0eded;
+  height: 40px;
+  width: 20px;
+  transform: translateY(0px) rotateZ(45deg);
+}
+
+.second-1{
+  height: 100px;
+  width: 24px;
+  transform: translateX(-6px);
+  z-index: 2;
+}
+
+.zero {
+  box-sizing: border-box;
+  height: 100px;
+  width: 100px;
+  border: 24px solid #fff;
+  border-radius: 50px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.first{
+  margin: 0 -16px;
+  z-index: 1;
+}
+
+.letters{
+  text-transform: uppercase;
+  color: #fff;
+  font-stretch: ultra-expanded;
+}
+
+.days {
+  font-weight: 900;
+  font-size: 80px;
+  line-height: 76px;
+}
+
+.challenge{
+  margin-left: 6px;
+  line-height: 14px;
+  font-weight: 100;
+  font-size: 26px;
+}
