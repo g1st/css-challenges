@@ -77,11 +77,7 @@ $shadowCircle: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes pulse-2 {
-  0% {
-    box-shadow: $shadowNone;
-    height: 0px;
-    width: 0px;
-  }
+  0%,
   20% {
     box-shadow: $shadowNone;
     height: 0px;
@@ -95,11 +91,7 @@ $shadowCircle: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes pulse-3 {
-  0% {
-    box-shadow: $shadowNone;
-    height: 0px;
-    width: 0px;
-  }
+  0%,
   40% {
     box-shadow: $shadowNone;
     height: 0px;

@@ -71,11 +71,7 @@
 }
 
 @keyframes pulse-2 {
-  0% {
-    box-shadow: 0px 0px 0px 0px transparent;
-    height: 0px;
-    width: 0px;
-  }
+  0%,
   20% {
     box-shadow: 0px 0px 0px 0px transparent;
     height: 0px;
@@ -89,11 +85,7 @@
 }
 
 @keyframes pulse-3 {
-  0% {
-    box-shadow: 0px 0px 0px 0px transparent;
-    height: 0px;
-    width: 0px;
-  }
+  0%,
   40% {
     box-shadow: 0px 0px 0px 0px transparent;
     height: 0px;
