@@ -1,0 +1,113 @@
+// Colours
+
+$background: #e56262;
+$shadowNone: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+$shadowCircle: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  height: 600px;
+}
+
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: $background;
+  margin: 100px auto;
+  box-shadow: 1px 2px 14px 0px rgba(0, 0, 0, 0.3);
+}
+
+.circle-1 {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: $shadowCircle;
+  animation: pulse 2s infinite cubic-bezier(.21,.98,.6,.99) alternate;
+}
+
+.circle-2 {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: $shadowCircle;
+  animation: pulse-2 2s infinite cubic-bezier(.21,.98,.6,.99) alternate;
+}
+
+.circle-3 {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: $shadowCircle;
+  animation: pulse-3 2s infinite cubic-bezier(.21,.98,.6,.99) alternate;
+}
+
+@keyframes pulse {
+  0% {
+    height: 0px;
+    width: 0px;
+    box-shadow: $shadowNone;
+  }
+  100% {
+    height: 100px;
+    width: 100px;
+    box-shadow: $shadowCircle;
+  }
+}
+
+@keyframes pulse-2 {
+  0% {
+    box-shadow: $shadowNone;
+    height: 0px;
+    width: 0px;
+  }
+  20% {
+    box-shadow: $shadowNone;
+    height: 0px;
+    width: 0px;
+  }
+  100% {
+    width: 70px;
+    height: 70px;
+    box-shadow: $shadowCircle;
+  }
+}
+
+@keyframes pulse-3 {
+  0% {
+    box-shadow: $shadowNone;
+    height: 0px;
+    width: 0px;
+  }
+  40% {
+    box-shadow: $shadowNone;
+    height: 0px;
+    width: 0px;
+  }
+  100% {
+    width: 30px;
+    height: 30px;
+    box-shadow: $shadowCircle;
+  }
+}
