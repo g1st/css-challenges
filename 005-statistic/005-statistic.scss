@@ -8,7 +8,6 @@ $blue: rgba(123, 162, 255, 1);
 @mixin tooltip($color) {
   &:hover {
     .tooltip::before, .tooltip::after {
-      visibility: visible;
       opacity: 1;
       animation: tooltip .4s ease forwards;
       animation-fill-mode: forwards;
@@ -17,7 +16,6 @@ $blue: rgba(123, 162, 255, 1);
 
   .tooltip {
     &::before, &::after {
-      visibility: hidden;
       position: absolute;
       left: 50%;
       opacity: 0;
@@ -29,7 +27,7 @@ $blue: rgba(123, 162, 255, 1);
       border-style: solid;
       border-color: $color transparent transparent transparent;
       left: -3px;
-      top: -6px;
+      top: -56px;
     }
     &::after {
       content: attr(data-tooltip);
@@ -42,15 +40,13 @@ $blue: rgba(123, 162, 255, 1);
       border-radius: 4px;
       width: 20px;
       left: -12px;
-      top: -28px;
+      top: -78px;
     }
     // Hover effects for tooltip
     &:hover::before, &:hover::after {
-      visibility: visible;
       opacity: 0;
     }
     &:hover {
-      visibility: visible;
       opacity: 0;
     }
   }
@@ -216,6 +212,7 @@ body {
 
       .point {
         position: absolute;
+        display: block;
         width: 6px;
         height: 6px;
         border-radius: 50%;
@@ -225,36 +222,43 @@ body {
       .point-1 {
         top: 43px;
         left: 19px;
+        z-index: 10;
         @include tooltip($red);
       }
       .point-2 {
         top: 8px;
         left: 57px;
+        z-index: 10;
         @include tooltip($red);
       }
       .point-3 {
         top: 18px;
         left: 97px;
+        z-index: 10;
         @include tooltip($red);
       }
       .point-4 {
         top: 7px;
         left: 137px;
+        z-index: 10;
         @include tooltip($red);
       }
       .point-5 {
         top: 34px;
         left: 177px;
+        z-index: 10;
         @include tooltip($red);
       }
       .point-6 {
         top: 45px;
         left: 217px;
+        z-index: 10;
         @include tooltip($red);
       }
       .point-7 {
         top: 17px;
         left: 257px;
+        z-index: 10;
         @include tooltip($red);
       }
 
@@ -262,6 +266,7 @@ body {
     .blue .points {
       .point {
         position: absolute;
+        display: block;
         width: 6px;
         height: 6px;
         border-radius: 50%;
@@ -271,36 +276,43 @@ body {
       .point-1 {
         top: 55px;
         left: 19px;
+        z-index: 10;
         @include tooltip($blue);
       }
       .point-2 {
         top: 47px;
         left: 57px;
+        z-index: 10;
         @include tooltip($blue);
       }
       .point-3 {
         top: 62px;
         left: 97px;
+        z-index: 10;
         @include tooltip($blue);
       }
       .point-4 {
         top: 51px;
         left: 137px;
+        z-index: 10;
         @include tooltip($blue);
       }
       .point-5 {
         top: 57px;
         left: 177px;
+        z-index: 10;
         @include tooltip($blue);
       }
       .point-6 {
         top: 71px;
         left: 217px;
+        z-index: 10;
         @include tooltip($blue);
       }
       .point-7 {
         top: 58px;
         left: 257px;
+        z-index: 10;
         @include tooltip($blue);
       }
 
@@ -327,11 +339,11 @@ body {
 
 @keyframes tooltip {
   0% {
-    transform: translateY(10px);
+    transform: translateY(60px);
     opacity: 0;
   }
   100% {
-    transform: translateY(-4px);
+    transform: translateY(44px);
     opacity: 1;
   }
 }
