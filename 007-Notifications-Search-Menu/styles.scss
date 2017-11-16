@@ -1,0 +1,153 @@
+// Colors
+
+$dark_blue: #2A3F59;
+$light_blue: lighten(#2A3F59, 24);
+$regular_text: darken(grey, 7);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", "Helvetica", "sans-serif";
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 200px auto;
+  background: $dark_blue;
+  box-shadow: 1px 2px 14px rgba(0,0,0, 0.4);
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: 0 auto;
+  top: 50%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-50%);
+  box-shadow: 6px 6px 24px rgba(0,0,0, 0.7);
+
+}
+
+.header {
+  position: relative;
+  flex: 1 0 0;
+  background: $light_blue;
+  h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 60px;
+  }
+}
+
+.menu {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 15px;
+  left: 20px;
+  &:hover {
+    cursor: pointer;
+    .stripe-1, .stripe-2, .menu-circle {
+      background: #fff;
+    }
+  }
+}
+
+.stripe-1 {
+  top: 9px;
+  position: absolute;
+  background: lightblue;
+  width: 20px;
+  height: 3px;
+  border-radius: 2px;
+  transition: all .2s ease-in-out;
+}
+
+.stripe-2 {
+  top: 21px;
+  position: absolute;
+  background: lightblue;
+  width: 30px;
+  height: 3px;
+  border-radius: 2px;
+  transition: all .2s ease-in-out;
+}
+
+.menu-circle {
+  top: 7px;
+  right: 0;
+  position: absolute;
+  background: lightblue;
+  width: 7px;
+  height: 7px;
+  border-radius: 6px;
+  transition: all .2s ease-in-out;
+}
+
+.search {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 15px;
+  right: 20px;
+  background: #fff;
+}
+
+.main {
+  position: relative;
+  flex: 4 0 0;
+  background: #fff;
+}
+
+.event {
+  color: $regular_text;
+  font-size: 14px;
+  margin: 20px 20px 0 50px;
+  font-weight: 400;
+  p strong {
+    font-weight: 600;
+  }
+  &:hover {
+    cursor: pointer;
+    color: $light_blue;
+  }
+}
+
+
+.event .time {
+  position: relative;
+  font-size: 12px;
+
+  &:before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    background: #fff;
+    border: 2px solid $light_blue;
+    box-shadow: 0 0 0 4px #fff;
+    border-radius: 50%;
+    top: 3px;
+    left: -24px;
+  }
+}
+
+.line {
+  position: absolute;
+  left: 30px;
+  width: 3px;
+  height: 100%;
+  background: #eee;
+}
