@@ -9,26 +9,38 @@ body {
 }
 
 .container {
+  overflow: hidden;
   position: relative;
   width: 400px;
   height: 400px;
   margin: 200px auto;
   background: #2A3F59;
   box-shadow: 1px 2px 14px rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
 }
 
 .card {
+  overflow: hidden;
+  border-radius: 3px;
+  z-index: 2;
   width: 300px;
   height: 300px;
   position: relative;
   margin: 0 auto;
   top: 50%;
+  left: 0;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   flex-direction: column;
   transform: translateY(-50%);
-  box-shadow: 6px 6px 24px rgba(0, 0, 0, 0.7);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+  transition: all .5s ease-in-out;
+}
+
+.card.show-menu {
+  transition: all .5s ease-in-out;
+  left: 150px;
 }
 
 .header {
@@ -43,6 +55,29 @@ body {
   font-size: 16px;
   font-weight: 600;
   line-height: 60px;
+}
+
+.header input {
+  position: absolute;
+  color: #6e6e6e;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 30px;
+  z-index: 3;
+  width: 230px;
+  padding: 8px;
+  padding-left: 20px;
+  border-radius: 20px;
+  border: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s ease-in-out;
+}
+
+.header input.active {
+  left: 15px;
+  visibility: visible;
+  opacity: 1;
 }
 
 .menu {
@@ -98,13 +133,60 @@ body {
   height: 30px;
   top: 15px;
   right: 20px;
-  background: #fff;
+}
+
+.search:hover {
+  cursor: pointer;
+}
+
+.search:hover .magnifier-circle {
+  border-color: #fff;
+}
+
+.search:hover .magnifier-handle {
+  background-color: #fff;
+}
+
+.magnifier-circle {
+  width: 16px;
+  height: 16px;
+  top: 5px;
+  left: 6px;
+  position: absolute;
+  border: 3px solid lightblue;
+  border-radius: 50%;
+  transition: all .2s ease-in-out;
+}
+
+.magnifier-handle {
+  width: 8px;
+  height: 3px;
+  position: absolute;
+  background: lightblue;
+  border-radius: 6px;
+  top: 19px;
+  left: 18px;
+  transform: rotateZ(45deg);
+  transition: all .2s ease-in-out;
 }
 
 .main {
   position: relative;
+  overflow: hidden;
   flex: 4 0 0;
   background: #fff;
+}
+
+.main :nth-child(3) {
+  animation: event-fade-in .5s .4s both ease-out;
+}
+
+.main :nth-child(4) {
+  animation: event-fade-in .5s .6s both ease-out;
+}
+
+.main :nth-child(5) {
+  animation: event-fade-in .5s .8s both ease-out;
 }
 
 .event {
@@ -112,6 +194,7 @@ body {
   font-size: 14px;
   margin: 20px 20px 0 50px;
   font-weight: 400;
+  opacity: 0;
 }
 
 .event p strong {
@@ -143,8 +226,61 @@ body {
 
 .line {
   position: absolute;
+  top: 0;
   left: 30px;
   width: 3px;
   height: 100%;
   background: #eee;
+}
+
+.navigation {
+  position: absolute;
+  top: 65px;
+  left: 70px;
+  width: 150px;
+  height: 270px;
+  background: #2d4460;
+  transition: all .5s ease-in-out;
+}
+
+.navigation.active {
+  transition: all .5s ease-in-out;
+  left: 50px;
+}
+
+.navigation ul {
+  height: 250px;
+  margin-top: 10px;
+}
+
+.navigation ul li {
+  cursor: pointer;
+  padding: 0 34px;
+  font-size: 14px;
+  list-style: none;
+  color: #93b2cd;
+  line-height: 50px;
+  position: relative;
+  transition: all .2s ease-in-out;
+}
+
+.navigation ul li span {
+  position: absolute;
+  top: 18px;
+  left: 12px;
+}
+
+.navigation ul li:hover {
+  color: #fff;
+  background: #264057;
+}
+
+@keyframes event-fade-in {
+  0% {
+    transform: translate3d(0, 50px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
