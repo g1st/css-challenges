@@ -1,0 +1,164 @@
+//
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 100px auto;
+  width: 400px;
+  height: 400px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  box-shadow: 4px 6px 14px rgba(0,0,0,0.3);
+  filter: blur(3px) contrast(25);
+}
+
+.circle {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+@keyframes spin360 {
+  10% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin360delay {
+  20% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-360delay {
+  30% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes spin-360 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes spawn {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.small-circle-1 {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  transform-origin: 330% 380%;
+  animation: spin-360 7s infinite ease-in-out;
+}
+
+.small-circle-2 {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  transform-origin: -630% -400%;
+  animation: spin-360delay 5.5s .5s infinite ease-in-out;
+}
+
+.small-circle-3 {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  transform-origin: 467% -400%;
+  animation: spin360delay 7.5s 1s infinite ease-in-out;
+}
+
+.small-circle-4 {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  transform-origin: -430% 300%;
+  animation: spin-360 6s 2s infinite ease-in-out;
+}
+
+.small-circle-5 {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  transform-origin: -630% -400%;
+  animation: spin360 5.6s .3s infinite ease-in-out;
+}
+
+.small-circle-6 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  transform-origin: 111% -110%;
+  animation: spin-360 9s 3s infinite ease-in-out;
+}
+
+// .spawn-1 {
+//   top: 20px;
+//   transform-origin: 50% 60%;
+//   left: 50px;
+//   position: absolute;
+//   width: 50px;
+//   height: 50px;
+//   background: red;
+//   border-radius: 50%;
+//   animation: spawn 4s infinite linear;
+// }
+
+.spawn-2 {
+  top: 6px;
+  transform-origin: 36px 50px;
+  left: 6px;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  animation: spawn 9s infinite linear;
+}
