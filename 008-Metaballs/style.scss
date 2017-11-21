@@ -74,12 +74,6 @@
 }
 
 @keyframes spawn {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
   100% {
     transform: rotate(360deg);
   }
@@ -91,7 +85,7 @@
   background: #fff;
   border-radius: 50%;
   transform-origin: 330% 380%;
-  animation: spin-360 7s infinite ease-in-out;
+  animation: spin-360 6s infinite linear;
 }
 
 .small-circle-2 {
@@ -100,7 +94,7 @@
   border-radius: 50%;
   background: #fff;
   transform-origin: -630% -400%;
-  animation: spin-360delay 5.5s .5s infinite ease-in-out;
+  animation: spin-360delay 4.5s .5s infinite ease-in-out;
 }
 
 .small-circle-3 {
@@ -109,7 +103,7 @@
   border-radius: 50%;
   background: #fff;
   transform-origin: 467% -400%;
-  animation: spin360delay 7.5s 1s infinite ease-in-out;
+  animation: spin360delay 6.5s 1s infinite ease-in-out;
 }
 
 .small-circle-4 {
@@ -118,7 +112,7 @@
   border-radius: 50%;
   background: #fff;
   transform-origin: -430% 300%;
-  animation: spin-360 6s 2s infinite ease-in-out;
+  animation: spin-360 5s 2s infinite ease-in-out;
 }
 
 .small-circle-5 {
@@ -127,7 +121,7 @@
   border-radius: 50%;
   background: #fff;
   transform-origin: -630% -400%;
-  animation: spin360 5.6s .3s infinite ease-in-out;
+  animation: spin360 4.6s .3s infinite ease-in-out;
 }
 
 .small-circle-6 {
@@ -136,20 +130,20 @@
   border-radius: 50%;
   background: #fff;
   transform-origin: 111% -110%;
-  animation: spin-360 9s 3s infinite ease-in-out;
+  animation: spin-360 7s 3s infinite ease-in-out;
 }
 
-// .spawn-1 {
-//   top: 20px;
-//   transform-origin: 50% 60%;
-//   left: 50px;
-//   position: absolute;
-//   width: 50px;
-//   height: 50px;
-//   background: red;
-//   border-radius: 50%;
-//   animation: spawn 4s infinite linear;
-// }
+.spawn-1 {
+  top: 20px;
+  transform-origin: 40% 90%;
+  left: 50px;
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  animation: spawn 6s 2s infinite ease-in-out;
+}
 
 .spawn-2 {
   top: 6px;
@@ -157,8 +151,68 @@
   left: 6px;
   position: absolute;
   width: 60px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  animation: spawn 5s infinite ease-in-out;
+}
+
+.spawn-3 {
+  top: 6px;
+  transform-origin: 36px 50px;
+  left: 6px;
+  position: absolute;
+  width: 50px;
   height: 60px;
   background: #fff;
   border-radius: 50%;
-  animation: spawn 9s infinite linear;
+  animation: spawn 4s infinite ease-in-out;
+}
+
+.spawn-4 {
+  top: 0px;
+  transform-origin: 40px 50px;
+  left: 25px;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  animation: spawn 5s 1s infinite ease-in-out;
+}
+
+.spawn-5 {
+  top: 0px;
+  transform-origin: 35px 35px;
+  left: 10px;
+  position: absolute;
+  width: 70px;
+  height: 80px;
+  background: #fff;
+  border-radius: 50%;
+  animation: spawn 5s 3s infinite ease-in-out;
+}
+
+.spawn-6 {
+  top: 20px;
+  transform-origin: 45px 35px;
+  left: 20px;
+  position: absolute;
+  width: 80px;
+  height: 70px;
+  background: #fff;
+  border-radius: 50%;
+  animation: spawn 4s 2s infinite ease-in-out;
+}
+
+.spawn-6 {
+  top: 5px;
+  transform-origin: 45px 35px;
+  left: 5px;
+  position: absolute;
+  width: 80px;
+  height: 90px;
+  background: #fff;
+  border-radius: 50%;
+  animation: spawn 4s 2s infinite ease-in-out;
 }
