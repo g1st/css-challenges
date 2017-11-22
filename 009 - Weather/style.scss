@@ -4,7 +4,7 @@ $frontHill: #36385F;
 $backgroundHill: #2D2F51;
 $moon: #f6edbd;
 $crater: darken($moon, 10);
-$rain: #7fc1f9;
+$drop: #7fc1f9;
 
 * {
   margin: 0;
@@ -93,6 +93,7 @@ body {
   border-radius: 50%;
   box-shadow: 0 0 3px 4px rgba(246, 237, 189, 0.2);
   overflow: hidden;
+  animation: moon 1s ease-out forwards;
 }
 
 .crater-1 {
@@ -234,4 +235,218 @@ body {
   top: 250px;
   left: 260px;
   background: $frontHill;
+}
+
+.drop-big-1 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: $drop;
+  border-radius: 50%;
+  top: -22px;
+  left: 180px;
+  animation: big-drop .8s infinite linear;
+  &::before {
+    content: "";
+    position: absolute;
+    background: $drop;
+    width: 10px;
+    height: 12px;
+    top: -9px;
+    left: 0px;
+    border-radius: 3px;
+    clip-path: polygon(80% 0%, 100% 100%, 2% 100%);
+  }
+}
+
+.drop-big-2 {
+  @extend .drop-big-1;
+  left: 30px;
+  animation-delay: .13s;
+}
+
+.drop-big-3 {
+  @extend .drop-big-1;
+  left: 90px;
+  animation-delay: .22s;
+}
+
+.drop-big-4 {
+  @extend .drop-big-1;
+  left: 260px;
+  animation-delay: .51s;
+}
+
+.drop-big-5 {
+  @extend .drop-big-1;
+  left: 345px;
+  animation-delay: .42s;
+}
+
+.drop-big-6 {
+  @extend .drop-big-1;
+  left: 410px;
+  animation-delay: .35s;
+}
+
+.drop-big-7 {
+  @extend .drop-big-1;
+  left: 120px;
+  animation-delay: .26s;
+}
+
+.drop-big-8 {
+  @extend .drop-big-1;
+  left: 220px;
+  animation-delay: .18s;
+}
+
+.drop-small-1 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: $drop;
+  border-radius: 50%;
+  top: -22px;
+  left: 180px;
+  transform: scale(0.4);
+  opacity: 0.4;
+  animation: small-drop 1.5s infinite linear;
+  &::before {
+    content: "";
+    position: absolute;
+    background: $drop;
+    width: 10px;
+    height: 12px;
+    top: -9px;
+    left: 0px;
+    border-radius: 3px;
+    clip-path: polygon(80% 0%, 100% 100%, 2% 100%);
+  }
+}
+
+.drop-small-2 {
+  @extend .drop-small-1;
+  left: 290px;
+  animation-delay: .52s;
+}
+
+.drop-small-3 {
+  @extend .drop-small-1;
+  left: 190px;
+  animation-delay: .16s;
+}
+
+.drop-small-4 {
+  @extend .drop-small-1;
+  left: 120px;
+  animation-delay: .83s;
+}
+
+.drop-small-5 {
+  @extend .drop-small-1;
+  left: 405px;
+  animation-delay: .77s;
+}
+
+.drop-small-6 {
+  @extend .drop-small-1;
+  left: 40px;
+  animation-delay: .13s;
+}
+
+.drop-small-7 {
+  @extend .drop-small-1;
+  left: 325px;
+  animation-delay: .49s;
+}
+
+@keyframes moon {
+  0% {
+    transform: translate(-10px, 180px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.drop-medium-1 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: $drop;
+  border-radius: 50%;
+  top: -22px;
+  left: 180px;
+  transform: scale(0.6);
+  opacity: 0.6;
+  animation: medium-drop 1.25s infinite linear;
+  &::before {
+    content: "";
+    position: absolute;
+    background: $drop;
+    width: 10px;
+    height: 12px;
+    top: -9px;
+    left: 0px;
+    border-radius: 3px;
+    clip-path: polygon(80% 0%, 100% 100%, 2% 100%);
+  }
+}
+
+.drop-medium-2 {
+  @extend .drop-medium-1;
+  left: 287px;
+  animation-delay: .1s;
+}
+
+.drop-medium-3 {
+  @extend .drop-medium-1;
+  left: 420px;
+  animation-delay: .23s;
+}
+
+.drop-medium-4 {
+  @extend .drop-medium-1;
+  left: 376px;
+  animation-delay: .36s;
+}
+
+.drop-medium-5 {
+  @extend .drop-medium-1;
+  left: 247px;
+  animation-delay: .54s;
+}
+
+.drop-medium-6 {
+  @extend .drop-medium-1;
+  left: 105px;
+  animation-delay: .31s;
+}
+
+@keyframes big-drop {
+  70% {
+    transform: translate(-40px, 310px) scaleX(1) scaleY(1) rotate(0deg);
+  }
+  100% {
+    transform: translate(-40px, 320px) scaleX(3) scaleY(0) rotate(20deg);
+  }
+}
+
+@keyframes small-drop {
+  70% {
+    transform: translate(-40px, 310px) scaleX(1) scaleY(1) rotate(0deg) scale(0.4);
+  }
+  100% {
+    transform: translate(-40px, 325px) scaleX(3) scaleY(0) rotate(20deg) scale(0.4);
+  }
+}
+
+@keyframes medium-drop {
+  70% {
+    transform: translate(-40px, 310px) scaleX(1) scaleY(1) rotate(0deg) scale(0.6);
+  }
+  100% {
+    transform: translate(-40px, 322px) scaleX(3) scaleY(0) rotate(20deg) scale(0.6);
+  }
 }
