@@ -8,6 +8,10 @@ $color: #222;
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 .container {
   margin: 100px auto;
   width: 400px;
@@ -23,14 +27,57 @@ $color: #222;
   overflow: hidden;
 }
 
-.runner {
+.info {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.date {
   position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 192px;
-  height: 192px;
-  border-radius: 50%;
-  border: 2px solid red;
+  top: 60px;
+  // left: 50px;
+  font-size: 12px;
+}
+.time {
+  position: absolute;
+  top: 80px;
+  line-height: 40px;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.cardio {
+  position: absolute;
+  top: 122px;
+  font-size: 12px;
+
+  .heart-rate {
+    margin-right: 10px;
+  }
+
+  .fa-heart {
+    color: red;
+    animation: heart-beat 1s linear infinite;
+    transition: all 1s;
+  }
+}
+
+@keyframes heart-beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .timer {
@@ -43,41 +90,41 @@ $color: #222;
 
   &:after {
     position: absolute;
-    top: 11px;
-    left: 11px;
+    top: 9px;
+    left: 9px;
     content: '';
-    width: 170px;
-    height: 170px;
+    width: 175px;
+    height: 175px;
     border-radius: 50%;
     border: 4px dotted #fff;
     transform: rotate(180deg);
 
   }
-  .mask {
-    z-index: 2;
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    // background: green;
-    .spin {
-      z-index: 1;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: pink;
-      border-radius: 50%;
-      border: 2px solid yellow;
-      animation: rotate 6s linear infinite;
-    }
-  }
+}
+.mask {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  // background: green;
+}
+.spin {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  // background: pink;
+  border-radius: 50%;
+  border: 2px solid red;
+  animation: rotate 6s linear infinite;
 }
 
-// .m1 {
-//   clip-path: inset(0% 0% 0% 50%);
-// }
+.m1 {
+  clip-path: inset(0% 0% 0% 50%);
+}
 
 .m2 {
   clip-path: inset(0% 50% 0% 0%);
@@ -87,10 +134,10 @@ $color: #222;
   clip-path: inset(0% 50% 0% 0%);
 }
 
-// .sp2 {
-//   clip-path: inset(0% 0% 0% 50%);
-//   animation-delay: 1s;
-// }
+.sp2 {
+  clip-path: inset(0% 0% 0% 50%);
+  animation-delay: 1.5s;
+}
 
 
 @keyframes rotate {
